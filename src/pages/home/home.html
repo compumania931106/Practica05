@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Custo Pipe
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h4>Texto sin formato</h4>
+  <ion-card>
+    <ion-card-header>
+      <code>User</code>
+    </ion-card-header>
+    <ion-card-content>
+      {{user | json}}
+    </ion-card-content>
+  </ion-card>
+
+  <h4>Texto con formato</h4>
+  <ion-list >
+    <ion-item>
+      <ion-label fixed>Primero</ion-label>
+      <ion-note item-right>
+        {{user | userExtract:"DD/LL/AA"}}
+      </ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Apellido</ion-label>
+      <ion-note item-right>
+        {{user | userExtract:"AA/MM/DD"}}
+      </ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Edad</ion-label>
+      <ion-note item-right>
+        {{user | userExtract:"AAAA/LL/DD"}}
+      </ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Edad</ion-label>
+      <ion-note item-right>
+        {{user | userExtract:"DD/LL/AAAA"}}
+      </ion-note>
+    </ion-item>
+  </ion-list>
+</ion-content>
